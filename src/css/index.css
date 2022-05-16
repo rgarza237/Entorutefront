@@ -1,0 +1,304 @@
+:root {
+  --main-color: #ea6a63f7;
+  --second-color: #81D6D9;
+  --thirth-color: #ea6a6369;
+  --logo-color: #FCED06;
+}
+
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(59, 22, 30, 1) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Play', sans-serif;
+  min-height: 100vh;
+}
+
+/* clases generales */
+.d-none {
+  display: none;
+}
+
+
+/* Navegacion */
+
+.nav-container {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.nav-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container ul li a {
+  text-transform: uppercase;
+  color: var(--main-color);
+  cursor: pointer;
+  text-decoration:none;
+}
+
+.nav-container ul li a:hover,
+.nav-container ul li a.active {
+  color: var(--second-color);
+}
+
+.nav-container ul li a.btn-nav {
+  padding: 0 5px;
+  color: var(--second-color);
+  border: 1px solid var(--second-color);
+}
+
+.border-nav {
+  border-bottom: 0.5px solid var(--thirth-color);
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  border-radius: 40%;
+}
+
+.btn-main:hover {
+  background: var(--second-color);
+  color: #509a9c;
+  border: 0.5px solid var(--second-color);
+}
+a:-webkit-any-link {
+  text-decoration: none
+}
+/* conteiner  */
+.body-container {
+  text-align: center;
+}
+.body-container h3.title-section {
+  color: var(--second-color);
+}
+h1 {
+  color: var(--main-color)
+}
+h1:hover {
+  color: var(--second-color)
+}
+
+/* dashboard de discos */
+.section-discks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-album {
+  background: #00000069;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid var(--thirth-color);
+}
+
+.card-album:hover {
+  border: 1px solid var(--second-color);
+}
+
+.card-album:hover h3 {
+  color: var(--second-color);
+}
+
+.card-album h3 {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.card-album img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* section player */
+.section-player {
+  display: flex;
+  justify-content: center;
+}
+
+.section-player .card-album-player img {
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.card-album-player h4,
+.card-album-player h5 {
+  color: var(--main-color);
+}
+
+/* side menu */
+.side-menu-container {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000c4;
+  transition: all 2.5s ease;
+}
+.side-menu {
+  background-color:#070707;
+  color: white !important;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+}
+.side-menu-container .MuiDivider-root {
+  background-color: rgb(248 248 248 / 12%) !important;
+  color: white;
+}
+.close-menu .MuiIconButton-root {
+  color: white;
+}
+
+.MuiListItem-divider {
+  border-bottom: 1px solid rgb(247 239 239 / 12%) !important;
+}
+.slide {
+  width: 0px;
+}
+.close-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.MuiFilledInput-underline:after {
+  border-bottom: 2px solid var(--second-color);
+}
+.MuiInputBase-input {
+  background:var(--logo-color) !important;
+  color:#030303 !important
+}
+.MuiTypography-body1 {
+  font-family: 'Play', sans-serif !important;
+}
+
+/* logo */
+.logo {
+  position: absolute;
+  left: 1.5rem;
+  color: #FCED06;
+  top: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* user side menu */
+.user-menu {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+.user-menu img {
+  border-radius: 25px;
+  max-width: 100px;
+}
+
+
+/* player */
+.options h6,
+.options ul li {
+  color: var(--main-color);
+}
+
+.options ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+audio {
+  width: 100%;
+}
+
+/* buttons */
+.btn-main {
+  left: -1%;
+  top: 86%;
+  background: #953433 !important;
+  color: var(--main-color) !important;
+  font-family: 'Play', sans-serif !important;
+  font-weight: 800 !important;
+  width: 100px ;
+  height: 30px;
+  font-size: 18px;
+  border: 0.5px solid var(--main-color) !important;
+  border-radius:0rem !important;
+  cursor: pointer;
+}
+.btn-main a {
+  color: var(--main-color) !important;
+  text-decoration: none
+}
+
+.controls_left .btn-main {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 100%, 0 69%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 100%, 0 69%);
+}
+
+.controls_middle .btn-main {
+  -webkit-clip-path: polygon(100% 0, 100% 75%, 84% 100%, 16% 100%, 0 75%, 0% 0%);
+  clip-path: polygon(100% 0, 100% 75%, 84% 100%, 16% 100%, 0 75%, 0% 0%);
+}
+
+.controls_right .btn-main {
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 66%, 80% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 66%, 80% 100%, 0% 100%);
+}
+
+/* playlist */
+#playlist {
+  background: #666;
+  width: 100%;
+  padding: 20px;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#playlist a {
+  text-decoration: none;
+}
+
+#playlist .active a {
+  color: #5DB0E6;
+  text-decoration: none;
+}
+
+#playlist li a {
+  color: var(--main-color);
+  background: #333;
+  padding: 5px;
+  display: block;
+}
+
+#playlist li a:hover {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+@media screen and (max-width: 600px) {
+  .card-album img {
+    width: 135px;
+  }
+
+  .logo {
+    top: 30px;
+    left: auto;
+    right: 25px;
+  }
+
+}
